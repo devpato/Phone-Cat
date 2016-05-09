@@ -3,7 +3,9 @@
 body {
   padding-top: 20px;
 }
-
+.mira{
+  cursor: pointer;
+}
 
 .phone-images {
   background-color: white;
