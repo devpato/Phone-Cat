@@ -2,13 +2,22 @@
     <div class="row">
       <div class="col-md-2">
         <!--Sidebar content-->
-        Search: <input ng-model="query">
-        <select ng-model="orderProp">
-          <option value="name">Alphabetical</option>
-          <option value="age">Newest</option>
-        </select>
+       
+       
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Search for..." ng-model="query">
+          <span class="input-group-btn">
+            <button class="btn btn-default" type="button">Go!</button>
+            
+          
+        </div>
+         <select class="dropdown" ng-model="orderProp">
+                <option value="name">Alphabetical</option>
+                <option value="age">Newest</option>
+              </select>   
       </div>
-      <div class="col-md-10">
+
+      <div class="col-md-8">
       <!--Body content-->
         <table class="phones table table-bordered table-hover table-responsive">
           <thead>
