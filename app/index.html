@@ -31,15 +31,17 @@
 			</div>
 			<div class="col-md-10">
 			<!--Body content-->
-				<table class="phones">
+				<table class="phones table table-bordered table-hover table-responsive">
 					<thead>
 		      			<tr>
+		      				<th>Image</th>
 		      				<th>Cellphone Name</th>
 		      				<th>Description</th>
 		      			</tr>
 		      		</thead>
 		      		<tbody ng-repeat="phone in phones | filter:query | orderBy:orderProp">
-		      			<td>{{phone.name}}</td>	
+		      			<td><a href="#/phones/{{phone.id}}" class="thumb"><img class="img-circle" ng-src="{{phone.imageUrl}}" style="width: 70px"></a></td>
+		      			<td><a href="#/phones/{{phone.id}}">{{phone.name}}</a></td>	
 				    	<td>{{phone.snippet}}</td>				 
 				</table>
 			</div>

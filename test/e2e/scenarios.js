@@ -42,3 +42,11 @@ describe('PhoneCat App', function() {
     });
   });
 });
+it('should render phone specific links', function() {
+      var query = element(by.model('query'));
+      query.sendKeys('nexus');
+      element.all(by.css('.phones li a')).first().click();
+      browser.getLocationAbsUrl().then(function(url) {
+        expect(url).toBe('/phones/nexus-s');
+      });
+    });
